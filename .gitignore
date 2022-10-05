@@ -147,3 +147,4 @@ cython_debug/
 out
 gen
 __pycache__
+*.xlsx

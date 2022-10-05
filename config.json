@@ -9,16 +9,27 @@
       "type": "json",
       "param": {
         "page": 1,
-        "rows": 20,
+        "rows": 1000,
         "sidx": "StartHour",
         "sord": "asc",
         "sm_CorpName-Title": "",
         "s_OpenDate": ""
       },
+      "child": {
+        "coding": "url",
+        "method": "post",
+        "url": "https://jy.sicnu.edu.cn/home/queryZwPro",
+        "params": {
+          "page": 1,
+          "rows": 50,
+          "sidx": "Id",
+          "sord": "asc",
+          "id": "${id}"
+        }
+      },
       "is_valid": 1,
       "province_name": "四川",
-      "city_name": "成都",
-      "file_url": "./job_doc/scsfdx_10_job.xlsx"
+      "city_name": "成都"
     },
     {
       "name": "西南大学就业官网",
@@ -28,32 +39,35 @@
       "method": "get",
       "param": {
         "page": 1,
-        "size": 20,
+        "size": 500,
         "industryId": "143"
+      },
+      "child": {
+        "coding": "url",
+        "method": "post",
+        "url": "https://jy.sicnu.edu.cn/home/queryZwPro",
+        "params": {
+          "page": 1,
+          "rows": 50,
+          "sidx": "Id",
+          "sord": "asc",
+          "id": "${id}"
+        }
       },
       "is_valid": 1,
       "province_name": "重庆",
-      "city_name": "北碚区",
-      "file_url": "./job_doc/xndx_10_job.xlsx"
+      "city_name": "北碚区"
     },
     {
       "name": "成都本地宝教师招聘",
       "page_url": "http://cd.bendibao.com/job/jiaoshizhaopin/",
-      "data_url": "https://jy.sicnu.edu.cn/home/zczpListHome",
+      "data_url": "",
       "method": "post",
       "type": "page",
-      "param": {
-        "page": 1,
-        "rows": 20,
-        "sidx": "StartHour",
-        "sord": "asc",
-        "sm_CorpName-Title": "",
-        "s_OpenDate": ""
-      },
+      "param": null,
       "is_valid": 1,
       "province_name": "四川",
-      "city_name": "成都",
-      "file_url": "./job_doc/cdbdbjszp_10_job.xlsx"
+      "city_name": "成都"
     }
   ]
 }
